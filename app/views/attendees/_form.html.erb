@@ -1,0 +1,27 @@
+<%= form_with(model: attendee, local: true) do |form| %>
+  <% if attendee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(attendee.errors.count, "error") %> prohibited this attendee from being saved:</h2>
+
+      <ul>
+      <% attendee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<label class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :attendee_name, class:"form-control", placeholder:"Name"%>
+  </label>
+
+  <div class="field">
+    <%= form.label :foods %>
+    <%= form.text_field :foods, id: :attendee_foods, class:"form-control", placeholder:"8 Cornbreadsss" %>
+  </div>
+<br>
+<div class="actions button">
+    <%= form.submit  class: "btn btn-lg btn-warning" %>
+  </div>
+<% end %>

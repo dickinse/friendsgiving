@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<!--
+<p>
+  <strong>Name:</strong>
+  <%= @attendee.name %>
+</p>
+
+<p>
+  <strong>Foods:</strong>
+  <%= @attendee.foods %>
+</p>
+-->
+
+<div class="container">
+    <div class="jumbotron">
+    <h1>See you soooon</h1>
+    <p class="lead">Don't forget the food</p>
+    </div>
+</div>
+<div class="container">
+<%= link_to 'Edit', edit_attendee_path(@attendee) %> |
+<%= link_to 'Back', attendees_path %>
+</div>

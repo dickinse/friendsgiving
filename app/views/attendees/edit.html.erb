@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="jumbotron">
+    <h1>Friendsgiving</h1>
+    <p class="lead">Whatcha bringin?</p>
+    </div>
+</div>
+
+<div class="container">
+    <%= render 'form', attendee: @attendee %>
+</div>
+
+<%= link_to 'Show', @attendee %> |
+<%= link_to 'Back', attendees_path %>
